@@ -1,6 +1,3 @@
-// const xmlFormatter = require('xml-formatter');
-
-
 function clear() {
     document.getElementById("xml_input").value = "";
     document.getElementById("xml_output").value = "";
@@ -13,6 +10,10 @@ function prettify() {
     var xml_output = document.getElementById("xml_output");
 
 
+    if (xml_input.value == "") {
+        alert("Please enter XML code to prettify");
+        return;
+    }
     //define la data a enviar
     const data = {
         "xml_input": xml_input.value
@@ -39,24 +40,12 @@ function prettify() {
         )
         .catch(error => console.log(error));
 
-        // focus to output
+        //Focus to output and scroll into view button panel
         xml_output.focus();
-        //scroll to output
         botonera = document.getElementById("botonera");
-        //scroll in top
         botonera.scrollIntoView();
-    
-        //set textarea heigth to content
         
-        // xml_output.style.height = xml_count_lines * 20 + "px";
-
-
-
-
-
     
-    
-        
         //copy to clipboard
 
         copyToClipboard();

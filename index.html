@@ -11,29 +11,31 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+        
             <a class="navbar-brand" href="#">XML Prettifier</a>
-        </div>
+
     </nav>
 
     <div class="container-fluid text-center">
         <div class="container col ">
             <div class="form row">
-                <label class="form-label" for="xml_input">XML Input</label>
+                <h3 class="text-white" for="xml_input">XML Input</h3>
                 <textarea class="form-control" name="xml_input" id="xml_input" style="height: 500px" title="XML Entrada"></textarea>
                 
             </div>
 
-            <!-- <hr> -->
-            <div class="text-center mb-md-4" id="botonera">
-                <button type="button" class="btn btn-warning" id="btn_pretty" onclick=prettify()>Prettify</button>
-                <button type="button" class="btn btn-danger" id="btn_clear" onclick=clear()>Clear</button>
-                <button type="button" class="btn btn-primary" id="btn_copy" onclick=copyToClipboard()>Copy</button>
+            <hr>
+            <div class="row ">
+                <div class="text-center mb-md-4 botonera" id="botonera">
+                    <button type="button" class="btn btn-warning btn-lg" id="btn_pretty" onclick=prettify()>Prettify</button>
+                    <button type="button" class="btn btn-danger btn-lg" id="btn_clear" onclick=clear()>Clear</button>
+                    <button type="button" class="btn btn-primary btn-lg0" id="btn_copy" onclick=copyToClipboard()>Copy</button>
+                </div>
             </div>
             
             <div class=" form row">
-                <label class="form-label" for="xml_output">XML Output</label>
+                <h3 class="text-white" for="xml_output">XML Output</h3>
                 <textarea class="form-control" name="xml_output" id="xml_output" style="height: 500px" title="XML Salida" disabled></textarea>
                 
             </div>
