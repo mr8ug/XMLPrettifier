@@ -43,12 +43,12 @@ body{
 }
 
 
-.botonera button:hover{
+.botonera button:hover, .botonera a:hover{
     outline: none;
     box-shadow: 0 5px 0 5px #303335 !important;
 }
 
-.botonera button:active{
+.botonera button:active, .botonera a:active{
     outline: none;
     box-shadow: 0 1px 0 1px #303335 !important;
 }
