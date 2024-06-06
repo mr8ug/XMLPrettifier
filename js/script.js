@@ -1,6 +1,11 @@
-function clear() {
-    document.getElementById("xml_input").value = "";
-    document.getElementById("xml_output").value = "";
+function emptyEntries() {
+    console.log("clear");
+    var xml_input = document.getElementById("xml_input");
+    var xml_output = document.getElementById("xml_output");
+    xml_input.value = "";
+    xml_output.value = "";
+
+    
     
 }
 
@@ -48,12 +53,17 @@ function prettify() {
     
         //copy to clipboard
 
-        copyToClipboard();
+        // copyResults();
 
 }
 
-function copyToClipboard() {
-    var xml_output = document.getElementById("xml_output");
-    xml_output.select();
+function copyResults() {
+    console.log("copy");
+    const textarea = document.createElement("textarea");
+    textarea.value = document.getElementById("xml_output").innerHTML;
+    document.body.appendChild(textarea);
+    textarea.select();
     document.execCommand("copy");
+    document.body.removeChild(textarea);
+
 }
